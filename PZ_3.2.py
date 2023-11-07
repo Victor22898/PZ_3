@@ -13,7 +13,10 @@ c = float(0)
 
 while type(a) != int:
     try:
-       a = int(a)
+        a = int(a)
+        if 6 <= a:
+            print('Введите повторно')
+            raise ValueError
 
     except ValueError:  # обработка ошибки 
        print('Такой цифры нет!')
@@ -22,7 +25,7 @@ while type(a) != int:
        print('3 - метр')
        print('4 - миллиметр')
        print('5 - сантиметр')
-       a = input('Выберите режим: ')
+       a = input('Выберите цифру: ')
 
 b = float(input('Введите длину: '))
 if a == 1:
